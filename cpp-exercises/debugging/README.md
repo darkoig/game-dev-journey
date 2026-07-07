@@ -22,4 +22,4 @@ Write down your prediction for the balance at the end of year 3: 115,7625.
 
 ## Observation
 Depending on the type you choose for the balance, something happens
-with the decimals. What, and why? (answer goes to notas.md)
+with the decimals. What, and why? (answer goes to notes.md)
