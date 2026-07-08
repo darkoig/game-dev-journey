@@ -29,7 +29,12 @@ Interesting shortcuts in Visual Studio:
 
 # Learncpp
 ## Chapter 1
-When does undefined behaviour occur? What are the consequences of undefined behaviour?  
-- For example declaring a variable without initialization and using it for calculations or Cout.
-- The consequences can be anything, from crashing to work propertly. Can cause future bugs.
+When does undefined behaviour occur? What are the consequences of undefined behaviour?
+-Undefined behavior (UB) is what happens when a program does something for which the C++ standard imposes no requirements: the language guarantees nothing about the result — it may crash, produce wrong values, corrupt memory, or appear to work correctly, and the outcome can change between compilers, optimization levels, or runs.  
 ## Chapter 2
+Including header with realtive path is bad practice. Better to add external directories from including path in the IDE.  
+Interesting how the compiler works with header files. Is a way to centralize in one file multiple declarations and use it in n files.
+Do not rely on transitive includes if you need a header the best practice is to import even if you know that other import has it.  
+If everything is done correctly order of includes doesn't matter at all but is a good practice to keep in mind this order: Paired header for this specific code, other headers from the same project, 3rd party library headers, standard headers.  
+Header guards are crucial to avoid compilation errors. Convention is full filename of the header file, typed in all caps using underscore for spaces or punctuation.  
+Headers are so usefull but pragma once is easier and modern. It has one case where it can fail. Duplicated identical file in different places of the directory and both get included it will fail to prevent the error. But we will be using it as starndard for us.
