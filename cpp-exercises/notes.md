@@ -26,3 +26,10 @@ Interesting shortcuts in Visual Studio:
 - **F5** for *start* --> Same as before but the entry condition is to not being in debug mode.
 - **F9** to *create a breakpoint* --> It creates a marker that tells the debugger to stopp execution of the program at the breakpoint when running in debug mode.
 - **Ctrl+Shift+F10** for *set next statement* --> It allows to change the point of execution to some other statement (also called jumping)
+
+# Learncpp
+## Chapter 1
+When does undefined behaviour occur? What are the consequences of undefined behaviour?  
+- For example declaring a variable without initialization and using it for calculations or Cout.
+- The consequences can be anything, from crashing to work propertly. Can cause future bugs.
+## Chapter 2
