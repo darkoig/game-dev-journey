@@ -37,4 +37,26 @@ Interesting how the compiler works with header files. Is a way to centralize in 
 Do not rely on transitive includes if you need a header the best practice is to import even if you know that other import has it.  
 If everything is done correctly order of includes doesn't matter at all but is a good practice to keep in mind this order: Paired header for this specific code, other headers from the same project, 3rd party library headers, standard headers.  
 Header guards are crucial to avoid compilation errors. Convention is full filename of the header file, typed in all caps using underscore for spaces or punctuation.  
-Headers are so usefull but pragma once is easier and modern. It has one case where it can fail. Duplicated identical file in different places of the directory and both get included it will fail to prevent the error. But we will be using it as starndard for us.
+Headers are so usefull but pragma once is easier and modern. It has one case where it can fail. Duplicated identical file in different places of the directory and both get included it will fail to prevent the error. But we will be using it as starndard for us.  
+## Chapter 4
+|Variable type|Min-Size|Typical-size|
+|:------------|:------------:|------------:|
+|bool|1 byte|1 byte|
+|char|1 byte|1 byte|
+|wchar_t|1 byte|2 or 4 bytes|
+|char8_t|1 byte|1 byte|
+|char16_t|2 bytes|2 bytes|
+|char32_t|4 bytes|4 bytes|
+|short|2 bytes|2 bytes|
+|int|2 bytes|4 bytes|
+|long|2 bytes|4 or 8 bytes|
+|long long|8 bytes|8 bytes|
+|float|4 bytes|4 bytes|
+|double|8 bytes|8 bytes|
+|long double|8 bytes|8, 12 or 16 bytes|
+|std::nullptr_t|4 bytes|4 or 8 bytes|
+- sizeof returns size of the variable in bytes (not length of array for example)
+- C++ only guarantees that integers will have a certain minimum size, not that they will have specific size.
+- n-bit signed variable has a range of -(2^n-1^) to (2^n-1^)-1
+- For declaring unsigned variable we have to use unsigned before the variable type.
+- n-bit unsigned variable has a range of 0 to (2^n^)-1.  
